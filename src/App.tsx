@@ -4,10 +4,15 @@ import {TodoForm} from './components/TodoForm'
 
 
 const App: React.FC = () => {
+
+  const addHandler = (title: string) => {
+    console.log('add New Todo', title)
+  }
+
   return <>
     <Navbar/> 
     <div className="container">
-      <TodoForm />
+      <TodoForm onAdd={addHandler} />
     </div>
   </>;
 }
